@@ -10,6 +10,11 @@ Vote Counting
 # Authors
 
 * Jose Labra
+* Fabio Martinez Gonzalez
+* Andrea Vega Campos
+* Pablo Mendendez Barrientos
+* Roberto Fernandez Diaz
+* Emilio Velasco Sanchez
 
 
 
