@@ -14,7 +14,7 @@ Vote Counting
 * Andrea Vega Campos
 * Pablo Mendendez Barrientos
 * Roberto Fernandez Diaz
-* Emilio Velasco Sanchez
+* Luis Emilio Velasco Sanchez
 
 
 
