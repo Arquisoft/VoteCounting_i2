@@ -11,7 +11,7 @@
 
     <parent>
         <groupId>es.uniovi.asw</groupId>
-        <artifactId>votecounting-i2</artifactId>
+        <artifactId>VoteCounting_i2</artifactId>
         <version>0.0.1</version>
     </parent>
 
