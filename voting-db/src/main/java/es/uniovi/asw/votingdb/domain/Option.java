@@ -3,7 +3,9 @@ package es.uniovi.asw.votingdb.domain;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "option")
@@ -18,7 +20,7 @@ public class Option implements Serializable {
     private String comment;
 
     @OneToMany(mappedBy = "option")
-    private List<Vote> votes=new ArrayList<Vote>();
+    private Set<Vote> votes=new HashSet<Vote>();
 
     public Option() {
     }
@@ -26,15 +28,6 @@ public class Option implements Serializable {
     public Option(String comment, String name) {
         this.comment = comment;
         this.name = name;
-    }
-
-    public Option(String name, String comment, List<Vote> votes) {
-        this.name = name;
-        this.comment = comment;
-        this.votes = votes;
-
-        for(Vote v: votes)
-            v.setOption(this);
     }
 
     public long getOption_id() {
@@ -57,25 +50,25 @@ public class Option implements Serializable {
         this.comment = comment;
     }
 
-    private List<Vote> getOriginalVotes() {
+    protected Set<Vote> _getVotes() {
         return votes;
     }
 
-    public List<Vote> getVotes() {
-        return new ArrayList(votes);
+    public Set<Vote> getVotes() {
+        return new HashSet(votes);
     }
 
     public void addVote(Vote v)
     {
-        this.votes.add(v);
+        Association.InFavorOf.link(this,v);
     }
 
     public void removeVote(Vote v)
     {
-        this.votes.remove(v);
+        Association.InFavorOf.unlink(this,v);
     }
 
-    public void setVotes(List<Vote> votes) {
+    public void setVotes(Set<Vote> votes) {
         this.votes = votes;
     }
 
