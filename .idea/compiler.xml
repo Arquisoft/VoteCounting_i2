@@ -22,11 +22,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="VoteCounting_i2" />
+        <module name="results" />
+        <module name="VoteCounting_i2 (1)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="results" target="1.8" />
       <module name="VoteCounting_i2" target="1.8" />
+      <module name="VoteCounting_i2 (1)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
