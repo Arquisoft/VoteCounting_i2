@@ -5,9 +5,9 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>db-management</artifactId>
+    <artifactId>voting-db</artifactId>
     <version>0.0.1</version>
-    <name>DB Management</name>
+    <name>Voting Database</name>
 
     <parent>
         <groupId>es.uniovi.asw</groupId>

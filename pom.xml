@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>es.uniovi.asw</groupId>
-	<artifactId>votecounting-i2</artifactId>
+	<artifactId>VoteCounting_i2</artifactId>
   <packaging>pom</packaging>
 	<name>Vote Counting</name>
 	<version>0.0.1</version>
