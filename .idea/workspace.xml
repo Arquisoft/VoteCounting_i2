@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fff1aae-fc31-4182-96bc-306447b7167d" name="Default" comment="" />
+    <list default="true" id="0fff1aae-fc31-4182-96bc-306447b7167d" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/db-management.iml" afterPath="$PROJECT_DIR$/db-management-votes/db-management.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/pom.xml" afterPath="$PROJECT_DIR$/db-management-votes/pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/VoterService.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/VoterService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/exception/BusinessException.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/exception/BusinessException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/exception/VoterNotFoundException.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/exception/VoterNotFoundException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/impl/Command.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/impl/Command.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/impl/CommandExecutor.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/impl/CommandExecutor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/impl/VoterServiceImpl.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/impl/VoterServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/impl/voter/DeleteVoter.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/impl/voter/DeleteVoter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/impl/voter/GetVoter.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/impl/voter/GetVoter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/impl/voter/UpdatePassword.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/impl/voter/UpdatePassword.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/impl/voter/UpdateVoter.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/impl/voter/UpdateVoter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Option.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/Option.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/PollingStation.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/PollingStation.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Vote.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/Vote.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Voter.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/Voter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/infrastructure/ServicesFactory.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/infrastructure/ServicesFactory.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/persistence/VoterFinder.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/persistence/VoterFinder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/persistence/util/Jpa.java" afterPath="$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/persistence/util/Jpa.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/resources/META-INF/orm.xml" afterPath="$PROJECT_DIR$/db-management-votes/src/main/resources/META-INF/orm.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/db-management/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/db-management-votes/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VoteCounting_i2.iml" afterPath="$PROJECT_DIR$/VoteCounting_i2.iml" />
+    </list>
     <ignored path="VoteCounting_i2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,18 +47,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Voter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Voter.java">
+      <file leaf-file-name="Voter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/Voter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.025761124">
+            <state vertical-scroll-proportion="0.0">
               <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.31463414">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="PollingStation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/PollingStation.java">
+        <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/PollingStation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
@@ -44,7 +78,7 @@
         </entry>
       </file>
       <file leaf-file-name="Option.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Option.java">
+        <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/Option.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
@@ -54,7 +88,7 @@
         </entry>
       </file>
       <file leaf-file-name="Vote.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Vote.java">
+        <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/Vote.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
@@ -77,10 +111,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/db-management/src/test/java/es/uniovi/asw/dbmanagement/AppTest.java" />
-        <option value="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Voter.java" />
         <option value="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Vote.java" />
         <option value="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Option.java" />
         <option value="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/PollingStation.java" />
+        <option value="$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Voter.java" />
       </list>
     </option>
   </component>
@@ -156,7 +190,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db-management" />
+              <option name="myItemId" value="db-management-votes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -170,7 +204,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db-management" />
+              <option name="myItemId" value="db-management-votes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -188,7 +222,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db-management" />
+              <option name="myItemId" value="db-management-votes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -199,6 +233,10 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -210,7 +248,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db-management" />
+              <option name="myItemId" value="db-management-votes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -240,7 +278,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db-management" />
+              <option name="myItemId" value="db-management-votes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -253,6 +291,70 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dbmanagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="infrastructure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VoteCounting_i2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VoteCounting_i2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db-management-votes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dbmanagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VoteCounting_i2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VoteCounting_i2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db-management-votes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dbmanagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -709,16 +811,16 @@
       <updated>1459696564901</updated>
       <workItem from="1459696570454" duration="7312000" />
       <workItem from="1459754289390" duration="2233000" />
-      <workItem from="1460359133239" duration="329000" />
+      <workItem from="1460359133239" duration="756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9874000" />
+    <option name="totallyTimeSpent" value="10301000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -728,7 +830,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3386924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3386924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -761,7 +863,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Voter.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/Voter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -769,7 +871,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/PollingStation.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/PollingStation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
@@ -777,7 +879,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Option.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/Option.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
@@ -785,7 +887,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Vote.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/Vote.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
@@ -793,7 +895,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Voter.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/Voter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="124" column="57" selection-start-line="124" selection-start-column="57" selection-end-line="124" selection-end-column="57" />
@@ -801,7 +903,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/PollingStation.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/PollingStation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -809,7 +911,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Option.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/Option.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
@@ -817,7 +919,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Vote.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/Vote.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
@@ -825,50 +927,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/impl/Command.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/impl/Command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/impl/CommandExecutor.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/impl/CommandExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/impl/VoterServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/infrastructure/ServicesFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/exception/BusinessException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/exception/VoterNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/impl/VoterServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/impl/VoterServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -876,28 +949,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/impl/Command.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/infrastructure/ServicesFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/business/impl/CommandExecutor.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/exception/BusinessException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/test/java/es/uniovi/asw/dbmanagement/AppTest.class">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/exception/VoterNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/impl/VoterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/impl/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/business/impl/CommandExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/test/java/es/uniovi/asw/dbmanagement/AppTest.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1609756">
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Vote.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/Vote.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
@@ -905,7 +1007,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Option.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/Option.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
@@ -913,7 +1015,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/PollingStation.java">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/PollingStation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
@@ -921,18 +1023,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/db-management-votes/src/main/java/es/uniovi/asw/dbmanagement/domain/Voter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.71707314">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-management/src/main/java/es/uniovi/asw/dbmanagement/domain/Voter.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.025761124">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.31463414">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
