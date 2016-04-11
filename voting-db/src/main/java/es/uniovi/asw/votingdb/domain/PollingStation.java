@@ -3,7 +3,9 @@ package es.uniovi.asw.votingdb.domain;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "polling_station")
@@ -18,10 +20,10 @@ public class PollingStation implements Serializable {
     private String country;
 
     @OneToMany(mappedBy = "pollingStation")
-    private List<Voter> voters=new ArrayList<Voter>();
+    private Set<Voter> voters=new HashSet<Voter>();
 
     @OneToMany(mappedBy = "pollingStation")
-    private List<Vote> votes=new ArrayList<Vote>();
+    private Set<Vote> votes=new HashSet<Vote>();
 
     public PollingStation() {
     }
@@ -32,21 +34,6 @@ public class PollingStation implements Serializable {
         this.district = district;
         this.country = country;
     }
-
-    public PollingStation(String province, String city, String district, String country, List<Voter> voters, List<Vote> votes) {
-        this.province = province;
-        this.city = city;
-        this.district = district;
-        this.country = country;
-        this.voters = voters;
-        this.votes=votes;
-
-        for(Voter v: voters)
-            v.setPollingStation(this);
-        for(Vote v: votes)
-            v.setPollingStation(this);
-    }
-
 
     public long getPolling_station_code() {
         return polling_station_code;
@@ -84,48 +71,42 @@ public class PollingStation implements Serializable {
         this.country = country;
     }
 
-    private List<Voter> getOriginalVoters() {
-        return voters;
-    }
+    protected Set<Voter> _getVoters() { return voters; }
 
-    public List<Voter> getVoters() {
-        return new ArrayList(voters);
+    public Set<Voter> getVoters() {
+        return new HashSet<Voter>(voters);
     }
 
     public void addVoter(Voter v)
     {
-        this.voters.add(v);
+        Association.Belong.link(v,this);
     }
 
-    public void removeVoter(Voter v)
-    {
-        this.voters.remove(v);
-    }
+    public void removeVoter(Voter v) { Association.Belong.unlink(v,this); }
 
-    public void setVoters(List<Voter> voters) {
+    public void setVoters(Set<Voter> voters) {
         this.voters = voters;
     }
 
-
-    private List<Vote> getOriginalVotes() {
+    protected Set<Vote> _getVotes() {
         return votes;
     }
 
-    public List<Vote> getVotes() {
-        return new ArrayList(votes);
+    public Set<Vote> getVotes() {
+        return new HashSet<Vote>(votes);
     }
 
     public void addVote(Vote v)
     {
-        this.votes.add(v);
+        Association.Exercise.link(this,v);
     }
 
     public void removeVote(Vote v)
     {
-        this.votes.remove(v);
+        Association.Exercise.unlink(this,v);
     }
 
-    public void setVotes(List<Vote> votes) {
+    public void setVotes(Set<Vote> votes) {
         this.votes = votes;
     }
 

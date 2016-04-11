@@ -29,12 +29,13 @@ public class Voter implements Serializable {
     public Voter() {
     }
 
+   /* Estaba en el primer proyecto pero en este creo que no es necesario
     public Voter(String name, String nif, String email) {
         this.name = name;
         this.nif = nif;
         this.email = email;
         this.password = "plain";
-    }
+    }*/
 
     public Voter(long id, String name, String nif, String email, PollingStation pollingStation, String password, boolean has_evoted, boolean has_pvoted) {
         this.id = id;
@@ -46,7 +47,7 @@ public class Voter implements Serializable {
         this.has_evoted = has_evoted;
         this.has_pvoted = has_pvoted;
 
-        pollingStation.addVoter(this);
+        Association.Belong.link(this,pollingStation);
     }
 
     public long getId() {
@@ -81,7 +82,7 @@ public class Voter implements Serializable {
         return pollingStation;
     }
 
-    public void setPollingStation(PollingStation pollingStation) {
+    protected void setPollingStation(PollingStation pollingStation) {
         this.pollingStation = pollingStation;
     }
 

@@ -17,4 +17,10 @@
         </query>
     </named-query>
 
+    <named-query name="Vote.findByPollingStation">
+        <query>
+            select o from Vote v, polling_station p, option o where v.polling_station = ?1 and v.pollingStation = p and v.option = o
+        </query>
+    </named-query>
+
 </entity-mappings>

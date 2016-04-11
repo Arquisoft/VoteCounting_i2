@@ -1,20 +1,21 @@
 package es.uniovi.asw.votingdb.domain;
 
+import es.uniovi.asw.votingdb.domain.types.VoteKey;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@IdClass(VoteKey.class)
 @Table(name = "vote")
 public class Vote implements Serializable {
 
 
     @Id
-    @GeneratedValue
-    private long vote_id;
-
     @ManyToOne
     private Option option;
 
+    @Id
     @ManyToOne
     private PollingStation pollingStation;
 
@@ -25,8 +26,8 @@ public class Vote implements Serializable {
         this.option = option;
         this.pollingStation = pollingStation;
 
-        option.addVote(this);
-        pollingStation.addVote(this);
+        Association.InFavorOf.link(option, this);
+        Association.Exercise.link(pollingStation,this);
     }
 
     public Option getOption() {
@@ -45,33 +46,29 @@ public class Vote implements Serializable {
         this.pollingStation = pollingStation;
     }
 
-    public long getVote_id() {
-        return vote_id;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Vote vote = (Vote) o;
+
+        if (!option.equals(vote.option)) return false;
+        return pollingStation.equals(vote.pollingStation);
+
     }
 
-    public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        if (!super.equals(object)) return false;
-
-        Vote vote = (Vote) object;
-
-        if (vote_id != vote.vote_id) return false;
-
-        return true;
-    }
-
+    @Override
     public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + (int) (vote_id ^ (vote_id >>> 32));
+        int result = option.hashCode();
+        result = 31 * result + pollingStation.hashCode();
         return result;
     }
 
-    @java.lang.Override
-    public java.lang.String toString() {
+    @Override
+    public String toString() {
         return "Vote{" +
-                "vote_id=" + vote_id +
-                ", option=" + option +
+                "option=" + option +
                 ", pollingStation=" + pollingStation +
                 '}';
     }
