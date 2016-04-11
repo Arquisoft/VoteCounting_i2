@@ -14,7 +14,7 @@ public class Option implements Serializable {
     @GeneratedValue
     private long option_id;
 
-    @Column(unique = true, nullable = false)
+    @Column(unique = true, nullable = false)//pendiente de confirmar con el otro grupo
     private String name;
 
     private String comment;
