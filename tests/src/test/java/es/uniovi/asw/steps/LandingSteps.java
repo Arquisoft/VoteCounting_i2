@@ -20,7 +20,7 @@ import static org.junit.Assert.*;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import es.uniovi.asw.Application;
+import es.uniovi.asw.results.Application;
 
 @ContextConfiguration(classes=Application.class, loader=SpringApplicationContextLoader.class)
 @IntegrationTest
