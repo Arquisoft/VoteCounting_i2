@@ -21,6 +21,7 @@
 	</properties>
 
 	<modules>
+		<module>counting</module>
 		<module>results</module>
 		<module>tests</module>
 		<module>results-db</module>
