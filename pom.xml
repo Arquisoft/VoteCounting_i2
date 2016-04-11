@@ -22,6 +22,7 @@
 
 	<modules>
 		<module>results</module>
+		<module>voting-db</module>
 	</modules>
 
 	<distributionManagement>
