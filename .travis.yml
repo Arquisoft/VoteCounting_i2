@@ -1,5 +1,10 @@
 language: java
 jdk:
 - oraclejdk8
+
+notifications:
+  slack: arquisofti2b:5f14wMgpnF6luTNIoBZopzFq#travis
+  email: false
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
