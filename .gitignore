@@ -57,3 +57,6 @@ local.properties
 
 # Code Recommenders
 .recommenders/
+
+.idea/
+VoteCounting_i2.iml
