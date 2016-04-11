@@ -60,3 +60,4 @@ local.properties
 
 # IntelliJ ignores
 .idea/
+VoteCounting_i2.iml
