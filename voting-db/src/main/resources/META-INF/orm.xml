@@ -19,7 +19,13 @@
 
     <named-query name="Vote.findByPollingStation">
         <query>
-            select o from Vote v, polling_station p, option o where v.polling_station = ?1 and v.pollingStation = p and v.option = o
+            select v from Vote v, polling_station p where p = ?1 and v.pollingStation = p
+        </query>
+    </named-query>
+
+    <named-query name="Vote.countByPollingStationAndOption">
+        <query>
+            select count(v) from Vote v, polling_station p, option o where p = ?1 and o=?2 and v.pollingStation = p and v.option = o
         </query>
     </named-query>
 

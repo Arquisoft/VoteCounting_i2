@@ -10,23 +10,24 @@ import es.uniovi.asw.votingdb.persistence.VoteFinder;
 
 import javax.persistence.NoResultException;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by Fabio on 12/04/2016.
  */
-public class GetVotesPolling implements Command<List<Vote>> {
+public class GetNumberVotesOptionPolling implements Command<Integer> {
 
     private PollingStation pollingStation;
+    private Option option;
 
-    public GetVotesPolling(PollingStation pollingStation) {
+    public GetNumberVotesOptionPolling(PollingStation pollingStation, Option option) {
         this.pollingStation = pollingStation;
+        this.option =option;
     }
 
     @Override
-    public List<Vote> execute() throws BusinessException {
+    public Integer execute() throws BusinessException {
         try {
-            return VoteFinder.findByPollingStation(pollingStation);
+            return VoteFinder.countByPollingStationAndOption(pollingStation,option);
         } catch (NoResultException e) {
             throw new VotesNotFoundException();
         }

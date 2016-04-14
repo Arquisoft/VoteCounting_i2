@@ -25,7 +25,7 @@ public class Option implements Serializable {
     public Option() {
     }
 
-    public Option(String comment, String name) {
+    public Option(String name,String comment) {
         this.comment = comment;
         this.name = name;
     }

@@ -6,16 +6,20 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@IdClass(VoteKey.class)
+//@IdClass(VoteKey.class)
 @Table(name = "vote")
 public class Vote implements Serializable {
 
 
     @Id
+    @GeneratedValue
+    private long id;
+
+    //@Id
     @ManyToOne
     private Option option;
 
-    @Id
+    //@Id
     @ManyToOne
     private PollingStation pollingStation;
 
@@ -28,6 +32,10 @@ public class Vote implements Serializable {
 
         Association.InFavorOf.link(option, this);
         Association.Exercise.link(pollingStation,this);
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public Option getOption() {

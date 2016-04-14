@@ -2,6 +2,7 @@ package es.uniovi.asw.votingdb.business;
 
 import es.uniovi.asw.votingdb.domain.Option;
 import es.uniovi.asw.votingdb.domain.PollingStation;
+import es.uniovi.asw.votingdb.domain.Vote;
 
 import java.util.List;
 import java.util.Set;
@@ -16,7 +17,7 @@ public interface VoteService {
      * @param pollingStation The polling station from which you need the votes
      * @return set of votes of this polling station
      */
-    List<Option> getVotesPolling(PollingStation pollingStation);
+    List<Vote> getVotesPolling(PollingStation pollingStation);
 
     /**
      * Returns the number of votes to one option in a given polling station

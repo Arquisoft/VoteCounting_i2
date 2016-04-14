@@ -37,6 +37,17 @@ public class Voter implements Serializable {
         this.password = "plain";
     }*/
 
+    public Voter(String name, String nif, String email, PollingStation pollingStation, String password) {
+        this.name = name;
+        this.nif = nif;
+        this.email = email;
+        this.pollingStation = pollingStation;
+        this.password = password;
+        this.has_evoted = false;
+        this.has_pvoted = false;
+
+        Association.Belong.link(this,pollingStation);
+    }
     public Voter(long id, String name, String nif, String email, PollingStation pollingStation, String password, boolean has_evoted, boolean has_pvoted) {
         this.id = id;
         this.name = name;
