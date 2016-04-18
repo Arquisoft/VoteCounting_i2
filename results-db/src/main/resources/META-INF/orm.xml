@@ -5,16 +5,15 @@
         xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
         version="2.0">
 
-    <named-query name="Voter.findByEmailAndPassword">
+    <named-query name="Results.findByOptionName">
         <query>
-            select v from Voter v where v.email = ?1 and v.password = ?2
+            select r from Results r where r.name = ?1
         </query>
     </named-query>
-
-    <named-query name="Voter.findByEmail">
+    
+    <named-query name="Results.findAllResults">
         <query>
-            select v from Voter v where v.email = ?1
+            select r from Results r
         </query>
     </named-query>
-
 </entity-mappings>
