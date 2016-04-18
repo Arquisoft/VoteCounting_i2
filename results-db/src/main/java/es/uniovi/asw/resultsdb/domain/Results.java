@@ -28,6 +28,12 @@ public class Results {
     	this.comment = comment;
     	this.votos = 0;
     }
+    
+    public Results (String name,  String comment, int votos){
+    	this.name = name;
+    	this.comment = comment;
+    	this.votos = votos;
+    }
 
 	public String getName() {
 		return name;
