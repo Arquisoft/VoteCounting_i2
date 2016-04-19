@@ -5,6 +5,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import es.uniovi.asw.resultsdb.business.exception.DatabaseFailException;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -49,7 +51,7 @@ public class Jpa {
             return ((Element) nl.item(0)).getAttribute("name");
 
         } catch (ParserConfigurationException | SAXException | IOException e1) {
-            throw new RuntimeException(e1);
+            throw new DatabaseFailException(e1);
         }
     }
 }
