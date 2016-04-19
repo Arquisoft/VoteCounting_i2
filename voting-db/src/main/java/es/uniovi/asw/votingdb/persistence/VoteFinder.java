@@ -18,9 +18,9 @@ public class VoteFinder {
                 .setParameter(1, pollingStation)
                 .getResultList();
     }
-    public static int countByPollingStationAndOption(PollingStation pollingStation,Option option) {
+    public static long countByPollingStationAndOption(PollingStation pollingStation,Option option) {
         return Jpa.getManager()
-                .createNamedQuery("Vote.countByPollingStationAndOption", Integer.class)
+                .createNamedQuery("Vote.countByPollingStationAndOption", Long.class)
                 .setParameter(1, pollingStation)
                 .setParameter(2, option)
                 .getSingleResult();

@@ -20,7 +20,7 @@ public class VoteServiceImpl implements VoteService {
     }
 
     @Override
-    public int getNumberVotesOptionPolling(PollingStation pollingStation, Option option) {
+    public Long getNumberVotesOptionPolling(PollingStation pollingStation, Option option) {
         return CommandExecutor.execute(new GetNumberVotesOptionPolling(pollingStation,option));
     }
 }

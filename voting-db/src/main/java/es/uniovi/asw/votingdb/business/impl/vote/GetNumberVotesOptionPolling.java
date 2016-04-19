@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by Fabio on 12/04/2016.
  */
-public class GetNumberVotesOptionPolling implements Command<Integer> {
+public class GetNumberVotesOptionPolling implements Command<Long> {
 
     private PollingStation pollingStation;
     private Option option;
@@ -25,7 +25,7 @@ public class GetNumberVotesOptionPolling implements Command<Integer> {
     }
 
     @Override
-    public Integer execute() throws BusinessException {
+    public Long execute() throws BusinessException {
         try {
             return VoteFinder.countByPollingStationAndOption(pollingStation,option);
         } catch (NoResultException e) {
