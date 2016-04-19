@@ -6,11 +6,27 @@ suponemos que es el algoritmo mas seguro aunque para probarlo con labra se puede
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: head"></head>
 <body>
+<div class="izquierda">
+<h1>
+    Voting result
+</h1>
+    <p>If nobody else would vote this would be the current result.</p>
 <div th:replace="fragments/header::cabecera"></div>
 <canvas id="chart" width="500" height="500"></canvas>
 
 <!-- Esto es para cargar el grafico -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 <script th:src="@{/js/ResultspieChart.js}"></script>
+</div>
+<div class="derecha">
+    <!-- Lista con los partidos que hay votado y su enlace. -->
+    <h1>Votation option:</h1>
+    <p> Below this lines you can fine the options for voting.</p>
+    <ul>
+        <!-- The idea is to add a link in order to see the info of the options. Dinamically.-->
+        <li>element</li>
+    </ul>
+
+</div>
 </body>
 </html>
