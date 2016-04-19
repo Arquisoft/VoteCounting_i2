@@ -73,7 +73,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-  </dependencies>
+		<dependency>
+			<groupId>es.uniovi.asw</groupId>
+			<artifactId>results-db</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+	</dependencies>
 
 
 	<build>

@@ -1,11 +1,11 @@
 package es.uniovi.asw.resultsdb.infrastructure;
 
-import es.uniovi.asw.resultsdb.business.VoterService;
-import es.uniovi.asw.resultsdb.business.impl.VoterServiceImpl;
+import es.uniovi.asw.resultsdb.business.ResultsService;
+import es.uniovi.asw.resultsdb.business.impl.ResultsServiceImpl;
 
 public class ServicesFactory {
 
-    public static VoterService createVoterService() {
-        return new VoterServiceImpl();
+    public static ResultsService createResultsService() {
+        return new ResultsServiceImpl();
     }
 }
