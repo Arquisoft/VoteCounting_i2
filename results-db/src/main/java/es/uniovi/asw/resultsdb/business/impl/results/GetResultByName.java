@@ -20,7 +20,7 @@ public class GetResultByName implements Command<Results> {
 	public Results execute() throws BusinessException {
 		try {
 			return ResultsFinder.findByOptionName(name);
-		} catch (NoResultException e) {
+		}catch(NoResultException e){
 			throw new ResultsNotFoundException();
 		}
 	}

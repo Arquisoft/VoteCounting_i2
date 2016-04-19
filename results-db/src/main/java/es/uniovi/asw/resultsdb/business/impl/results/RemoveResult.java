@@ -15,6 +15,7 @@ public class RemoveResult implements Command<Results> {
 	
 	@Override
 	public Results execute() throws BusinessException {
+		result = Jpa.getManager().merge(result);
 		Jpa.getManager().remove(result);
 		return null;
 	}

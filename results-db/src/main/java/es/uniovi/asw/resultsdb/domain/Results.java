@@ -86,20 +86,10 @@ public class Results {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
+		
 		Results other = (Results) obj;
-		if (comment == null) {
-			if (other.comment != null)
-				return false;
-		} else if (!comment.equals(other.comment))
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (votos != other.votos)
-			return false;
-		return true;
+		
+		return other.getName().equals(getName());
 	}
 
 	@Override
