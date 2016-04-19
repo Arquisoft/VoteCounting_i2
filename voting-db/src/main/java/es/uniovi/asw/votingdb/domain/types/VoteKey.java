@@ -10,7 +10,7 @@ import java.io.Serializable;
  */
 public class VoteKey implements Serializable {
     private static final long serialVersionUID = 1L;
-
+/*
     Long pollingStation;
     Long option;
 
@@ -35,4 +35,5 @@ public class VoteKey implements Serializable {
         result = 31 * result + option.hashCode();
         return result;
     }
+    */
 }

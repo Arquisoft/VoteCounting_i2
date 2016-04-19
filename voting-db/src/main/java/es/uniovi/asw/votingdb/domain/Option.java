@@ -30,6 +30,11 @@ public class Option implements Serializable {
         this.name = name;
     }
 
+    /**
+     * Solo para los tests de modelo
+     */
+    public void setOption_id(Long id) { this.option_id=id; }
+
     public long getOption_id() {
         return option_id;
     }
@@ -79,13 +84,13 @@ public class Option implements Serializable {
 
         Option option = (Option) o;
 
-        return name.equals(option.name);
+        return option_id == option.option_id;
 
     }
 
     @Override
     public int hashCode() {
-        return name.hashCode();
+        return (int) (option_id ^ (option_id >>> 32));
     }
 
     @Override

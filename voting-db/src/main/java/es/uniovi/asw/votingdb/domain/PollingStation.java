@@ -35,6 +35,11 @@ public class PollingStation implements Serializable {
         this.country = country;
     }
 
+    /**
+     * Solo para los tests de modelo
+     */
+    public void setPolling_station_code(Long id) { this.polling_station_code=id; }
+
     public long getPolling_station_code() {
         return polling_station_code;
     }
