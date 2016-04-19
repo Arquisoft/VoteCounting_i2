@@ -35,6 +35,11 @@ public class PollingStation implements Serializable {
         this.country = country;
     }
 
+    /**
+     * Solo para los tests de modelo
+     */
+    public void setPolling_station_code(Long id) { this.polling_station_code=id; }
+
     public long getPolling_station_code() {
         return polling_station_code;
     }
@@ -77,12 +82,12 @@ public class PollingStation implements Serializable {
         return new HashSet<Voter>(voters);
     }
 
-    public void addVoter(Voter v)
+   /* public void addVoter(Voter v)
     {
         Association.Belong.link(v,this);
     }
 
-    public void removeVoter(Voter v) { Association.Belong.unlink(v,this); }
+    public void removeVoter(Voter v) { Association.Belong.unlink(v,this); }*/
 
     public void setVoters(Set<Voter> voters) {
         this.voters = voters;
@@ -96,7 +101,7 @@ public class PollingStation implements Serializable {
         return new HashSet<Vote>(votes);
     }
 
-    public void addVote(Vote v)
+   /* public void addVote(Vote v)
     {
         Association.Exercise.link(this,v);
     }
@@ -104,7 +109,7 @@ public class PollingStation implements Serializable {
     public void removeVote(Vote v)
     {
         Association.Exercise.unlink(this,v);
-    }
+    }*/
 
     public void setVotes(Set<Vote> votes) {
         this.votes = votes;
@@ -136,7 +141,6 @@ public class PollingStation implements Serializable {
                 ", city='" + city + '\'' +
                 ", district='" + district + '\'' +
                 ", country='" + country + '\'' +
-                ", voters=" + voters +
                 '}';
     }
 }
