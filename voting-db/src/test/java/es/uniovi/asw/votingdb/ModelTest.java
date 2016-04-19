@@ -88,6 +88,7 @@ public class ModelTest {
         assertTrue(option.getVotes().contains(vote));
 
 
+
     }
 
     @Test
@@ -126,6 +127,8 @@ public class ModelTest {
         //Creamos las opciones de voto
         Option o1 = new Option("O1","option 1");
         Option o2 = new Option("O2","option 2");
+        o1.setOption_id(new Long(0));
+        o2.setOption_id(new Long(1));
 
         //Añadimos los votos
         Vote v1 = vota(vA,o1);
@@ -152,11 +155,49 @@ public class ModelTest {
         assertTrue(p1.getVotes().contains(v3));
         assertTrue(p2.getVotes().contains(v4));
 
-        //Hacemos el unlink
+
+        //Equals
+        assertTrue(o1.equals(o1));
+        assertTrue(vA.equals(vA));
+        assertTrue(p1.equals(p1));
+        assertTrue(v1.equals(v1));
+        assertFalse(o1.equals(null));
+        assertFalse(vA.equals(null));
+        assertFalse(p1.equals(null));
+        assertFalse(v1.equals(null));
+        assertFalse(o1.equals(o2));
+        assertFalse(vA.equals(vB));
+        assertFalse(p1.equals(p2));
+        assertFalse(v1.equals(v2));
+
+        //ToString
+        assertFalse(o1.toString().isEmpty());
+        assertFalse(vA.toString().isEmpty());
+        assertFalse(p1.toString().isEmpty());
+        assertFalse(v1.toString().isEmpty());
+
+        //Hashcodes
+        assertTrue(o1.hashCode()!=o2.hashCode());
+        assertTrue(v1.hashCode()!=v2.hashCode());
+        assertTrue(p1.hashCode()!=p2.hashCode());
+        assertTrue(vA.hashCode()!=vB.hashCode());
+
+
+        //Hacemos los unlink
         Association.Belong.unlink(vA,p1);
         Association.Belong.unlink(vB,p1);
         Association.Belong.unlink(vC,p1);
         Association.Belong.unlink(vD,p2);
+
+        Association.Exercise.unlink(p1,v1);
+        Association.Exercise.unlink(p1,v2);
+        Association.Exercise.unlink(p1,v3);
+        Association.Exercise.unlink(p2,v4);
+
+        Association.InFavorOf.unlink(o1,v1);
+        Association.InFavorOf.unlink(o2,v2);
+        Association.InFavorOf.unlink(o2,v3);
+        Association.InFavorOf.unlink(o1,v4);
 
         //Comprobamos que haya funcionado el unlink
         assertEquals(0,p1.getVoters().size());
@@ -165,6 +206,9 @@ public class ModelTest {
         assertFalse(p1.getVoters().contains(vC));
         assertEquals(0,p2.getVoters().size());
         assertFalse(p2.getVoters().contains(vD));
+
+        assertTrue(v1.getPollingStation()==null);
+        assertTrue(v1.getOption()==null);
 
     }
 

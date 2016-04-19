@@ -82,12 +82,12 @@ public class PollingStation implements Serializable {
         return new HashSet<Voter>(voters);
     }
 
-    public void addVoter(Voter v)
+   /* public void addVoter(Voter v)
     {
         Association.Belong.link(v,this);
     }
 
-    public void removeVoter(Voter v) { Association.Belong.unlink(v,this); }
+    public void removeVoter(Voter v) { Association.Belong.unlink(v,this); }*/
 
     public void setVoters(Set<Voter> voters) {
         this.voters = voters;
@@ -101,7 +101,7 @@ public class PollingStation implements Serializable {
         return new HashSet<Vote>(votes);
     }
 
-    public void addVote(Vote v)
+   /* public void addVote(Vote v)
     {
         Association.Exercise.link(this,v);
     }
@@ -109,7 +109,7 @@ public class PollingStation implements Serializable {
     public void removeVote(Vote v)
     {
         Association.Exercise.unlink(this,v);
-    }
+    }*/
 
     public void setVotes(Set<Vote> votes) {
         this.votes = votes;
@@ -141,7 +141,6 @@ public class PollingStation implements Serializable {
                 ", city='" + city + '\'' +
                 ", district='" + district + '\'' +
                 ", country='" + country + '\'' +
-                ", voters=" + voters +
                 '}';
     }
 }

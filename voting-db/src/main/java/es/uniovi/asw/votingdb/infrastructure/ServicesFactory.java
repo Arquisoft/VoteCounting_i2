@@ -14,6 +14,7 @@ public class ServicesFactory {
     public static VoteService createVoteService() {
         return new VoteServiceImpl();
     }
+
     /*public static PollingStationService createpollingStationService() {
         return new PollingStationServiceImpl();
     }

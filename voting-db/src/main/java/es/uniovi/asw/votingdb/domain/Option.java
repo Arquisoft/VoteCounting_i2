@@ -62,7 +62,7 @@ public class Option implements Serializable {
     public Set<Vote> getVotes() {
         return new HashSet(votes);
     }
-
+/**
     public void addVote(Vote v)
     {
         Association.InFavorOf.link(this,v);
@@ -72,7 +72,7 @@ public class Option implements Serializable {
     {
         Association.InFavorOf.unlink(this,v);
     }
-
+**/
     public void setVotes(Set<Vote> votes) {
         this.votes = votes;
     }
@@ -99,7 +99,6 @@ public class Option implements Serializable {
                 "option_id=" + option_id +
                 ", name='" + name + '\'' +
                 ", comment='" + comment + '\'' +
-                ", votes=" + votes +
                 '}';
     }
 }

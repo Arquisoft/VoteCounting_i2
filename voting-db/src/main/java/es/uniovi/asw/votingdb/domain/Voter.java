@@ -30,13 +30,12 @@ public class Voter implements Serializable {
     public Voter() {
     }
 
-   /* Estaba en el primer proyecto pero en este creo que no es necesario
-    public Voter(String name, String nif, String email) {
+   public Voter(String name, String nif, String email) {
         this.name = name;
         this.nif = nif;
         this.email = email;
         this.password = "plain";
-    }*/
+    }
 
     public Voter(String name, String nif, String email, PollingStation pollingStation, String password) {
         this.name = name;
