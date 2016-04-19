@@ -1,42 +1,50 @@
 package es.uniovi.asw.results.model;
 
 
-import es.uniovi.asw.results.service.exceptions.PartieNotFound;
-
-import java.util.Map;
 
 /**
  * Created by Roberto on 17/4/16.
  */
 public class ResultsDTO {
 
-    private Map<String,Long> parties;
+    private String name;
+    private String comment;
+    private int votes;
 
-    public ResultsDTO(){}
 
-    public ResultsDTO(Map<String,Long> parties){
-        this.parties=parties;
+    public ResultsDTO (String name,  String comment){
+        this.name = name;
+        this.comment = comment;
+        this.votes = 0;
     }
 
-    public long getResultsOfPartie(String partieName){
-
-        if(parties.containsKey(partieName)) {
-            return parties.get(partieName);
-        }else throw new PartieNotFound();
+    public ResultsDTO (String name,  String comment, int votes){
+        this.name = name;
+        this.comment = comment;
+        this.votes = votes;
     }
 
-    public long getTotalNumberOfVotes(){
-        return parties.entrySet().stream().mapToLong(Map.Entry::getValue).reduce(0, (a, b) -> a + b);
+    public String getName() {
+        return name;
     }
 
-    public Map<String, Long> getParties() {
-        return parties;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setParties(Map<String, Long> parties) {
-        this.parties = parties;
+    public String getComment() {
+        return comment;
     }
 
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 
+    public int getVotos() {
+        return votes;
+    }
 
+    public void setVotos(int votos) {
+        this.votes = votos;
+    }
 }
