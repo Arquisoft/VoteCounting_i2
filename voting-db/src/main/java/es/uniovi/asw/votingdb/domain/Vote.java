@@ -34,7 +34,12 @@ public class Vote implements Serializable {
         Association.Exercise.link(pollingStation,this);
     }
 
-    public Long getId() {
+    /**
+     * Solo para los tests de modelo
+     */
+    public void setId(Long id) { this.id=id; }
+
+    public long getId() {
         return id;
     }
 
@@ -61,16 +66,13 @@ public class Vote implements Serializable {
 
         Vote vote = (Vote) o;
 
-        if (!option.equals(vote.option)) return false;
-        return pollingStation.equals(vote.pollingStation);
+        return id == vote.id;
 
     }
 
     @Override
     public int hashCode() {
-        int result = option.hashCode();
-        result = 31 * result + pollingStation.hashCode();
-        return result;
+        return (int) (id ^ (id >>> 32));
     }
 
     @Override

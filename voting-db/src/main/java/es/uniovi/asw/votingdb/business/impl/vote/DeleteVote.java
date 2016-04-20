@@ -1,33 +1,32 @@
 package es.uniovi.asw.votingdb.business.impl.vote;
 
 import es.uniovi.asw.votingdb.business.exception.BusinessException;
+import es.uniovi.asw.votingdb.business.exception.OptionNotFoundException;
 import es.uniovi.asw.votingdb.business.exception.VotesNotFoundException;
 import es.uniovi.asw.votingdb.business.impl.Command;
 import es.uniovi.asw.votingdb.domain.Option;
-import es.uniovi.asw.votingdb.domain.PollingStation;
 import es.uniovi.asw.votingdb.domain.Vote;
+import es.uniovi.asw.votingdb.persistence.OptionFinder;
 import es.uniovi.asw.votingdb.persistence.VoteFinder;
+import es.uniovi.asw.votingdb.persistence.util.Jpa;
 
 import javax.persistence.NoResultException;
-import java.util.List;
 
 /**
- * Created by Fabio on 12/04/2016.
+ * Created by Fabio on 20/04/2016.
  */
-public class GetNumberVotesOptionPolling implements Command<Long> {
+public class DeleteVote implements Command<Vote> {
+    private Vote vote;
 
-    private PollingStation pollingStation;
-    private Option option;
-
-    public GetNumberVotesOptionPolling(PollingStation pollingStation, Option option) {
-        this.pollingStation = pollingStation;
-        this.option =option;
+    public DeleteVote(Vote vote) {
+        this.vote = vote;
     }
 
     @Override
-    public Long execute() throws BusinessException {
+    public Vote execute() throws BusinessException {
         try {
-            return VoteFinder.countByPollingStationAndOption(pollingStation,option);
+            Jpa.getManager().remove(VoteFinder.findById(vote.getId()));
+            return vote;
         } catch (NoResultException e) {
             throw new VotesNotFoundException();
         }

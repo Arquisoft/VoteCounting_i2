@@ -1,5 +1,5 @@
 Feature: Check navigation through pages
-  I want to easyli navigate through pages
+  I want to easily navigate through pages
 
 	Scenario: The application is running
 		Given that the application is running from results page

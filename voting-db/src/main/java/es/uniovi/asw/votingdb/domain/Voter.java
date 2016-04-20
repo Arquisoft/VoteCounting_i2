@@ -20,8 +20,9 @@ public class Voter implements Serializable {
 
     @ManyToOne
     private PollingStation pollingStation;
-    private String password;
 
+    private String password;
+    private String salt;
 
     private boolean has_evoted; //electronically voted
     private boolean has_pvoted; //phisically voted
@@ -29,13 +30,12 @@ public class Voter implements Serializable {
     public Voter() {
     }
 
-   /* Estaba en el primer proyecto pero en este creo que no es necesario
-    public Voter(String name, String nif, String email) {
+   public Voter(String name, String nif, String email) {
         this.name = name;
         this.nif = nif;
         this.email = email;
         this.password = "plain";
-    }*/
+    }
 
     public Voter(String name, String nif, String email, PollingStation pollingStation, String password) {
         this.name = name;
@@ -60,6 +60,11 @@ public class Voter implements Serializable {
 
         Association.Belong.link(this,pollingStation);
     }
+
+    /**
+     * Solo para los tests de modelo
+     */
+    public void setId(Long id) { this.id=id; }
 
     public long getId() {
         return id;
@@ -93,7 +98,7 @@ public class Voter implements Serializable {
         return pollingStation;
     }
 
-    protected void setPollingStation(PollingStation pollingStation) {
+    public void setPollingStation(PollingStation pollingStation) {
         this.pollingStation = pollingStation;
     }
 
@@ -112,6 +117,11 @@ public class Voter implements Serializable {
     public void setHas_evoted(boolean has_evoted) {this.has_evoted = has_evoted;}
 
     public void setHas_pvoted(boolean has_pvoted) {this.has_pvoted = has_pvoted;}
+
+    public String getSalt() { return salt; }
+
+    public void setSalt(String salt) { this.salt = salt;  }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

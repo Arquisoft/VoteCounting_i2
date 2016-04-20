@@ -5,7 +5,6 @@ import es.uniovi.asw.votingdb.domain.PollingStation;
 import es.uniovi.asw.votingdb.domain.Vote;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by Fabio on 11/04/2016.
@@ -25,7 +24,11 @@ public interface VoteService {
      * @param option the option from which you want to know the number of votes
      * @return the number of votes to this option in this polling station
      */
-    int getNumberVotesOptionPolling(PollingStation pollingStation, Option option);
+    long getNumberVotesOptionPolling(PollingStation pollingStation, Option option);
+
+    Vote updateVote(Vote vote);
+
+    Vote deleteVote(Vote vote);
 
 
 }

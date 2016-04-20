@@ -8,13 +8,13 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
-@Table(name = "option")
+@Table(name = "toption")
 public class Option implements Serializable {
     @Id
     @GeneratedValue
     private long option_id;
 
-    @Column(unique = true, nullable = false)//pendiente de confirmar con el otro grupo
+    @Column//pendiente de confirmar con el otro grupo
     private String name;
 
     private String comment;
@@ -29,6 +29,11 @@ public class Option implements Serializable {
         this.comment = comment;
         this.name = name;
     }
+
+    /**
+     * Solo para los tests de modelo
+     */
+    public void setOption_id(Long id) { this.option_id=id; }
 
     public long getOption_id() {
         return option_id;
@@ -57,7 +62,7 @@ public class Option implements Serializable {
     public Set<Vote> getVotes() {
         return new HashSet(votes);
     }
-
+/**
     public void addVote(Vote v)
     {
         Association.InFavorOf.link(this,v);
@@ -67,7 +72,7 @@ public class Option implements Serializable {
     {
         Association.InFavorOf.unlink(this,v);
     }
-
+**/
     public void setVotes(Set<Vote> votes) {
         this.votes = votes;
     }
@@ -79,13 +84,13 @@ public class Option implements Serializable {
 
         Option option = (Option) o;
 
-        return name.equals(option.name);
+        return option_id == option.option_id;
 
     }
 
     @Override
     public int hashCode() {
-        return name.hashCode();
+        return (int) (option_id ^ (option_id >>> 32));
     }
 
     @Override
@@ -94,7 +99,6 @@ public class Option implements Serializable {
                 "option_id=" + option_id +
                 ", name='" + name + '\'' +
                 ", comment='" + comment + '\'' +
-                ", votes=" + votes +
                 '}';
     }
 }
