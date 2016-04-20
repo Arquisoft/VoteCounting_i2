@@ -35,13 +35,15 @@
   var options = [[${results}]];
   var data = [];
 
-  for (var i = 0; i < options.length; i++) {
+  var i = 0;
+  for (option in options) {
     data[i] = {
-      value: options[i].value,
-      label: options[i].label,
+      value: options[option],
+      label: options,
       color: colors[i].color,
       highlight: colors[i].highlight
     };
+    i++;
   }
 
   var pieOptions = {
