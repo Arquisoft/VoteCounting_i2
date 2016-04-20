@@ -1,6 +1,9 @@
 package es.uniovi.asw.votingdb;
 
 
+
+import es.uniovi.asw.votingdb.business.OptionService;
+import es.uniovi.asw.votingdb.business.PollingStationService;
 import es.uniovi.asw.votingdb.business.VoteService;
 import es.uniovi.asw.votingdb.business.VoterService;
 import es.uniovi.asw.votingdb.business.exception.VoterNotFoundException;
@@ -52,11 +55,24 @@ public class JPATest {
     @Test
     public void testGetNumberVotes(){
         PollingStation p1 = new PollingStation("Asturias", "Jogin", "Cimavilla", "España");
-        Option o1 = new Option("O1","option 1");
+        Option o1 = new Option("oo","oo");
 
-
+        PollingStationService ps = ServicesFactory.createpollingStationService();
+        OptionService os = ServicesFactory.createOptionService();
         VoteService vs = ServicesFactory.createVoteService();
-        //assertEquals(new Long(0),vs.getNumberVotesOptionPolling(p1,o1));
+
+        p1=ps.updatePollingStation(p1);
+        o1=os.updateOption(o1);
+
+        Vote v1 = new Vote(o1,p1);
+        v1=vs.updateVote(v1);
+
+        assertEquals(1L,vs.getNumberVotesOptionPolling(p1,o1));
+        assertTrue(vs.getVotesPolling(p1).contains(v1));
+
+        vs.deleteVote(v1);
+        ps.deletePollingStation(p1);
+        os.deleteOption(o1);
     }
 
     @Test(expected = VoterNotFoundException.class)

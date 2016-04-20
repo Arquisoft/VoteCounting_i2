@@ -8,13 +8,13 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
-@Table(name = "option")
+@Table(name = "toption")
 public class Option implements Serializable {
     @Id
     @GeneratedValue
     private long option_id;
 
-    @Column(unique = true, nullable = false)//pendiente de confirmar con el otro grupo
+    @Column//pendiente de confirmar con el otro grupo
     private String name;
 
     private String comment;

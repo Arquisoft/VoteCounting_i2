@@ -25,4 +25,7 @@ public class VoteFinder {
                 .setParameter(2, option)
                 .getSingleResult();
     }
+    public static Vote findById(Long id) {
+        return Jpa.getManager().find(Vote.class, id);
+    }
 }

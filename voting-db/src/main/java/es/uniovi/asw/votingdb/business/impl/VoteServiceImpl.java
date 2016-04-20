@@ -1,8 +1,10 @@
 package es.uniovi.asw.votingdb.business.impl;
 
 import es.uniovi.asw.votingdb.business.VoteService;
+import es.uniovi.asw.votingdb.business.impl.vote.DeleteVote;
 import es.uniovi.asw.votingdb.business.impl.vote.GetNumberVotesOptionPolling;
 import es.uniovi.asw.votingdb.business.impl.vote.GetVotesPolling;
+import es.uniovi.asw.votingdb.business.impl.vote.UpdateVote;
 import es.uniovi.asw.votingdb.domain.Option;
 import es.uniovi.asw.votingdb.domain.PollingStation;
 import es.uniovi.asw.votingdb.domain.Vote;
@@ -20,7 +22,17 @@ public class VoteServiceImpl implements VoteService {
     }
 
     @Override
-    public Long getNumberVotesOptionPolling(PollingStation pollingStation, Option option) {
+    public long getNumberVotesOptionPolling(PollingStation pollingStation, Option option) {
         return CommandExecutor.execute(new GetNumberVotesOptionPolling(pollingStation,option));
+    }
+
+    @Override
+    public Vote updateVote(Vote vote) {
+        return CommandExecutor.execute(new UpdateVote(vote));
+    }
+
+    @Override
+    public Vote deleteVote(Vote vote) {
+        return CommandExecutor.execute(new DeleteVote(vote));
     }
 }
