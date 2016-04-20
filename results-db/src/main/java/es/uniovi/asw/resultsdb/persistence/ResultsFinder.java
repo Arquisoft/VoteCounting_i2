@@ -16,7 +16,7 @@ public class ResultsFinder {
     
     public static List<Results> findAllResults() {
         return Jpa.getManager()
-                .createNamedQuery("Results.findAllResults", Results.class)
+                .createQuery("select r from Results r", Results.class)
                 .getResultList();
     }
 }
