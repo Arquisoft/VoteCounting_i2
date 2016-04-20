@@ -29,7 +29,6 @@ public class Main {
   public String landing(Model model) {
    // no debe funcionar así, ya que un resultDTO es sólo un resultado
     model.addAttribute("results", new CurrentResults().getResults());
-    model.addAttribute("parties", new String[]{"uno", "dos"});
     return "results";
   }
 

@@ -24,17 +24,8 @@ services:
 before_script:
   - sh -c "mysqladmin -u root password root"
   - sh -c "mysql -u root -proot -e 'create database IF NOT EXISTS voters;'"
+  - sh setupdb.sh
 
 
 script:
-  - mvn clean
-  - mvn install -DskipTests
-  - cd voting-db
-  - mvn test
-  - cd ..
-  - cd results-db
-  - mvn test
-  - cd ..
-  - mvn test
-  - cd tests
-  - mvn test -Dintegrate=true
+  - sh test.sh
