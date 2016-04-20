@@ -19,6 +19,10 @@
 -- Table structure for table `polling_station`
 --
 
+CREATE DATABASE IF NOT EXISTS voters;
+
+USE voters;
+
 DROP TABLE IF EXISTS `polling_station`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;

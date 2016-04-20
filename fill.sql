@@ -19,6 +19,8 @@
 -- Table structure for table `polling_station`
 --
 
+CREATE DATABASE IF NOT EXISTS voters;
+
 USE voters;
 
 DROP TABLE IF EXISTS `polling_station`;
