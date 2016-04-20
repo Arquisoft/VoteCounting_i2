@@ -25,7 +25,11 @@ public interface VoteService {
      * @param option the option from which you want to know the number of votes
      * @return the number of votes to this option in this polling station
      */
-    int getNumberVotesOptionPolling(PollingStation pollingStation, Option option);
+    long getNumberVotesOptionPolling(PollingStation pollingStation, Option option);
+
+    Vote updateVote(Vote vote);
+
+    Vote deleteVote(Vote vote);
 
 
 }
