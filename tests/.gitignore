@@ -1,5 +1,5 @@
-filesin/
-filesout/
+temp_input/
+temp_out/
 
 *.class
 

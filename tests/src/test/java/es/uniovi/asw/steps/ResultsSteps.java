@@ -3,6 +3,7 @@ package es.uniovi.asw.steps;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import es.uniovi.asw.counting.VoteCount;
 import es.uniovi.asw.counting.VoteMapper;
 import es.uniovi.asw.counting.VoteReader;
 import es.uniovi.asw.counting.VoteReducer;
@@ -83,25 +84,7 @@ public class ResultsSteps {
 
     @When("I start the counting")
     public void triggerCount() throws Exception {
-        String inputPath = "filesin";
-        new File(inputPath).mkdir();
-        new VoteReader(ServicesFactory.createVoteService(),
-                inputPath+"/votes").readVotes();
-        Configuration conf = new Configuration();
-        Job job = new Job(conf);
-        job.setMapperClass(VoteMapper.class);
-        job.setReducerClass(VoteReducer.class);
-        job.setJarByClass(VoteMapper.class);
-        job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(IntWritable.class);
-        job.setInputFormatClass(TextInputFormat.class);
-        job.setOutputFormatClass(TextOutputFormat.class);
-        TextInputFormat.addInputPath(job, new Path(inputPath));
-        FileSystem fs = FileSystem.get(conf);
-        Path out = new Path("filesout");
-        fs.delete(out, true);
-        TextOutputFormat.setOutputPath(job, out);
-        job.waitForCompletion(true);
+        VoteCount.run();
     }
 
     @Then("The votes are shown")
