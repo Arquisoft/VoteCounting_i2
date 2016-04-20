@@ -30,5 +30,6 @@ public interface VoteService {
 
     Vote deleteVote(Vote vote);
 
+    List<Vote> getAllVotes();
 
 }
