@@ -1,32 +1,69 @@
-<!DOCTYPE HTML>
-<!-- meta para actualizar la pagina cada 300 segundos automaticamente,
-suponemos que es el algoritmo mas seguro aunque para probarlo con labra se puede cambiar-->
-<meta http-equiv="refresh" content="300" />
-
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/header :: head"></head>
+<head>
+  <link th:href="@{/css/voting.css}" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+</head>
 <body>
 <div class="izquierda">
-<h1>
+  <h1>
     Voting result
-</h1>
-    <p>If nobody else would vote this would be the current result.</p>
-<div th:replace="fragments/header::cabecera"></div>
-<canvas id="chart" width="500" height="500"></canvas>
+  </h1>
+  <canvas id="chart" width="500" height="500"></canvas>
 
-<!-- Esto es para cargar el grafico -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-<script th:src="@{/js/ResultspieChart.js}"></script>
 </div>
 <div class="derecha">
-    <!-- Lista con los partidos que hay votado y su enlace. -->
-    <h1>Votation option:</h1>
-    <p> Below this lines you can fine the options for voting.</p>
-    <ul>
-        <!-- The idea is to add a link in order to see the info of the options. Dinamically.-->
-        <li>element</li>
-    </ul>
+  <h1>Votation option:</h1>
+  <ul>
+    <li th:each="option : ${results.entrySet()}" th:text="${option.getKey()}"></li>
+  </ul>
 
 </div>
+
+<script th:inline="javascript" type="text/javascript">
+  /*<![CDATA[*/
+
+  var ctx = document.getElementById("chart").getContext("2d");
+
+  var colors = [
+    {color: "#D6E681", highlight: "#E5F78A"},
+    {color: "#BABF95", highlight: "#D8DDAD"},
+    {color: "#C4AD83", highlight: "#D6BD8F"},
+    {color: "#C6B677", highlight: "#E2D088"},
+    {color: "#DBB957", highlight: "#EDC95E"}
+  ];
+  var options = [[${results}]];
+  var data = [];
+
+  for (var i = 0; i < options.length; i++) {
+    data[i] = {
+      value: options[i].value,
+      label: options[i].label,
+      color: colors[i].color,
+      highlight: colors[i].highlight
+    };
+  }
+
+  var pieOptions = {
+    //Boolean - Whether we should show a stroke on each segment
+    segmentShowStroke: true,
+
+    scaleBackdropPaddingY: 2,
+    //Number - The backdrop padding to the side of the label in pixels
+    scaleBackdropPaddingX: 2,
+    //Boolean - Show line for each value in the scale
+    scaleShowLine: true,
+
+    //String - The colour of each segment stroke
+    segmentStrokeColor: "#fff",
+
+    //Number - The width of each segment stroke
+    segmentStrokeWidth: 2,
+    animateScale: true
+  };
+
+  var myPieChart = new Chart(ctx).Pie(data, pieOptions);
+  /*]]>*/
+</script>
 </body>
 </html>

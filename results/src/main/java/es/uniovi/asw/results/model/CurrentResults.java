@@ -5,7 +5,10 @@ import es.uniovi.asw.resultsdb.business.ResultsService;
 import es.uniovi.asw.resultsdb.domain.Results;
 import es.uniovi.asw.resultsdb.infrastructure.ServicesFactory;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Andrea on 19/04/2016.
@@ -66,5 +69,13 @@ public class CurrentResults {
 
     public void setParties(List<Results> parties) {
         this.parties = parties;
+    }
+
+    public Map<String, Integer> getResults() {
+        Map<String, Integer> results = new HashMap<String, Integer>();
+        for (Results result : parties) {
+            results.put(result.getName(), result.getVotos());
+        }
+        return results;
     }
 }
