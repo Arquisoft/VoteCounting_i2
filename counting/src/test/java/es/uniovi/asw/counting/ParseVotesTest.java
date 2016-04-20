@@ -2,10 +2,11 @@ package es.uniovi.asw.counting;
 
 import org.junit.Test;
 
-public class MainTest {
+public class ParseVotesTest {
 
     @Test
-    public void testEmpty() {
+    public void readVotes() {
+
     }
 
 }
