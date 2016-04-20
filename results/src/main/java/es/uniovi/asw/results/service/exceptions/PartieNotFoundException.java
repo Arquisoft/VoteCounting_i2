@@ -7,5 +7,5 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * Created by Roberto on 17/4/16.
  */
 @ResponseStatus(value = HttpStatus.NOT_FOUND ,reason = "The partie doesn't exist ")
-public class PartieNotFound extends RuntimeException {
+public class PartieNotFoundException extends RuntimeException {
 }
