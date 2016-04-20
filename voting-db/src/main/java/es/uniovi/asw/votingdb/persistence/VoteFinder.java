@@ -28,4 +28,10 @@ public class VoteFinder {
     public static Vote findById(Long id) {
         return Jpa.getManager().find(Vote.class, id);
     }
+
+    public static List<Vote> findAll() {
+        return Jpa.getManager()
+                .createNamedQuery("Vote.findAll", Vote.class)
+                .getResultList();
+    }
 }
