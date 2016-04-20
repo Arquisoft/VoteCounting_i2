@@ -11,16 +11,19 @@ import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 
+import java.io.File;
+
 public class VoteCount {
 
     public static void main(String[] args) throws Exception {
+        Path inputPath = new Path(args[0]);
+        new File(inputPath.toString()).mkdir();
+        new VoteReader(ServicesFactory.createVoteService(),
+                inputPath+"/votes").readVotes();
+
         Configuration conf = new Configuration();
 
         Job job = new Job(conf, "votecount");
-
-        Path inputPath = new Path(args[0]);
-
-        new VoteReader(ServicesFactory.createVoteService(), inputPath+"/votes");
 
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
