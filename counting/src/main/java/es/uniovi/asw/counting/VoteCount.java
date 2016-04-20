@@ -1,5 +1,6 @@
 package es.uniovi.asw.counting;
 
+import es.uniovi.asw.votingdb.infrastructure.ServicesFactory;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
@@ -17,6 +18,10 @@ public class VoteCount {
 
         Job job = new Job(conf, "votecount");
 
+        Path inputPath = new Path(args[0]);
+
+        new VoteReader(ServicesFactory.createVoteService(), inputPath+"/votes");
+
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
 
@@ -26,7 +31,7 @@ public class VoteCount {
         job.setInputFormatClass(TextInputFormat.class);
         job.setOutputFormatClass(TextOutputFormat.class);
 
-        FileInputFormat.addInputPath(job, new Path(args[0]));
+        FileInputFormat.addInputPath(job, inputPath);
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
         job.waitForCompletion(true);

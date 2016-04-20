@@ -19,7 +19,7 @@ public class VoteCountTest {
     @Before
     public void setUp() {
         VoteMapper mapper = new VoteMapper();
-        VoteReducer reducer = new VoteReducer();
+        VoteReducer reducer = new VoteReducer(null);
         mapDriver = MapDriver.newMapDriver(mapper);
         reduceDriver = ReduceDriver.newReduceDriver(reducer);
     }

@@ -9,8 +9,14 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 
 public class VoteReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
-    private static final ResultsService db =
-            ServicesFactory.createResultsService();
+    private ResultsService db = ServicesFactory.createResultsService();
+
+    public VoteReducer() {
+    }
+
+    public VoteReducer(ResultsService db) {
+        this.db = db;
+    }
 
     protected void reduce(Text key, Iterable<IntWritable> values, Context context)
             throws IOException, InterruptedException {
@@ -19,6 +25,12 @@ public class VoteReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
             sum += value.get();
         }
         context.write(key, new IntWritable(sum));
-        db.createResultEntry(key.toString(), "", sum);
+        persist(key.toString(), sum);
+    }
+
+    private void persist(String option, int sum) {
+        if (db != null) {
+            db.createResultEntry(option, "", sum);
+        }
     }
 }
