@@ -3,6 +3,7 @@ package es.uniovi.asw.counting;
 import org.junit.Test;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
@@ -25,6 +26,7 @@ public class ParseVotesTest {
             }
             assertNull(reader.readLine());
         }
+        new File(fileName).delete();
     }
 
 }
