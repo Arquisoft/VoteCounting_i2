@@ -37,4 +37,4 @@ script:
   - cd ..
   - mvn test
   - cd tests
-  - mvn test -integrate=true
+  - mvn test -Dintegrate=true
