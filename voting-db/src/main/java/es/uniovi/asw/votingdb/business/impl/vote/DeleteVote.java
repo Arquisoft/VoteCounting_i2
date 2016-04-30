@@ -1,12 +1,9 @@
 package es.uniovi.asw.votingdb.business.impl.vote;
 
 import es.uniovi.asw.votingdb.business.exception.BusinessException;
-import es.uniovi.asw.votingdb.business.exception.OptionNotFoundException;
 import es.uniovi.asw.votingdb.business.exception.VotesNotFoundException;
 import es.uniovi.asw.votingdb.business.impl.Command;
-import es.uniovi.asw.votingdb.domain.Option;
 import es.uniovi.asw.votingdb.domain.Vote;
-import es.uniovi.asw.votingdb.persistence.OptionFinder;
 import es.uniovi.asw.votingdb.persistence.VoteFinder;
 import es.uniovi.asw.votingdb.persistence.util.Jpa;
 

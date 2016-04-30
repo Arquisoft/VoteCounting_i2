@@ -7,13 +7,10 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
-import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
-import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 
 import java.io.File;
-import java.io.IOException;
 
 public class VoteCount {
 
@@ -25,7 +22,7 @@ public class VoteCount {
         String inputPath = "temp_input";
         new File(inputPath).mkdir();
         new VoteReader(ServicesFactory.createVoteService(),
-                inputPath+"/votes").readVotes();
+                inputPath + "/votes").readVotes();
         Configuration conf = new Configuration();
         Job job = new Job(conf);
         job.setMapperClass(VoteMapper.class);

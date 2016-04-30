@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MockVoteService implements VoteService {
-    private PollingStation pollingStation = new PollingStation("", "", "","");
+    private PollingStation pollingStation = new PollingStation("", "", "", "");
     private String[] options;
 
     public MockVoteService(String[] options) {

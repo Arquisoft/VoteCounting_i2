@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Con la segunda version de la abse de datos esto no haria falta
  * No lo voy a borrar de momento por si acaso vovlemos a la primera
- *
+ * <p>
  * Created by Fabio on 11/04/2016.
  */
 public class VoteKey implements Serializable {

@@ -12,7 +12,7 @@ public class VoteMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 
     protected void map(LongWritable key, Text option, Context context)
             throws IOException, InterruptedException {
-            context.write(option, addOne);
+        context.write(option, addOne);
     }
 
 }

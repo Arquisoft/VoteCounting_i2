@@ -14,7 +14,7 @@ public class ParseVotesTest {
 
     @Test
     public void readVotes() throws Exception {
-        String[] options = {"a","b", "c", "d"};
+        String[] options = {"a", "b", "c", "d"};
         String fileName = "temp_read";
 
         new VoteReader(new MockVoteService(options), fileName).readVotes();

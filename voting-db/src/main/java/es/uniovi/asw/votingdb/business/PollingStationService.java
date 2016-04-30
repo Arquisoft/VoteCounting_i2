@@ -8,5 +8,6 @@ import es.uniovi.asw.votingdb.domain.PollingStation;
 public interface PollingStationService {
 
     PollingStation updatePollingStation(PollingStation pollingStation);
+
     PollingStation deletePollingStation(PollingStation pollingStation);
 }

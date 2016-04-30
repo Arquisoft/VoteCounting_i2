@@ -1,9 +1,9 @@
 package es.uniovi.asw.resultsdb.persistence;
 
-import java.util.List;
-
 import es.uniovi.asw.resultsdb.domain.Results;
 import es.uniovi.asw.resultsdb.persistence.util.Jpa;
+
+import java.util.List;
 
 public class ResultsFinder {
 
@@ -13,7 +13,7 @@ public class ResultsFinder {
                 .setParameter(1, name)
                 .getSingleResult();
     }
-    
+
     public static List<Results> findAllResults() {
         return Jpa.getManager()
                 .createQuery("select r from Results r", Results.class)
