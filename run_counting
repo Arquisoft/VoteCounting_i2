@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+export HADOOP_OPTS="-DVOTING_DB_URL=$VOTING_DB_URL -DVOTING_DB_PASSWORD=$VOTING_DB_PASSWORD -DVOTING_DB_USER=$VOTING_DB_USER"
+hadoop/bin/hadoop jar counting/target/counting-0.0.1.jar es.uniovi.asw.counting.VoteCount
+

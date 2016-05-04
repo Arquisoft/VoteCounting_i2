@@ -19,9 +19,9 @@
 -- Table structure for table `polling_station`
 --
 
-CREATE DATABASE IF NOT EXISTS voters;
+CREATE DATABASE IF NOT EXISTS voting;
 
-USE voters;
+USE voting;
 
 DROP TABLE IF EXISTS `polling_station`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;

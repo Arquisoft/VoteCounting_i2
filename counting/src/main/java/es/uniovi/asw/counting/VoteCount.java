@@ -24,7 +24,7 @@ public class VoteCount {
         new VoteReader(ServicesFactory.createVoteService(),
                 inputPath + "/votes").readVotes();
         Configuration conf = new Configuration();
-        Job job = new Job(conf);
+        Job job = Job.getInstance();
         job.setMapperClass(VoteMapper.class);
         job.setReducerClass(VoteReducer.class);
         job.setJarByClass(VoteMapper.class);
