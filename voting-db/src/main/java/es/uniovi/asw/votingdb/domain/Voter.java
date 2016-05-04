@@ -30,7 +30,7 @@ public class Voter implements Serializable {
     public Voter() {
     }
 
-   public Voter(String name, String nif, String email) {
+    public Voter(String name, String nif, String email) {
         this.name = name;
         this.nif = nif;
         this.email = email;
@@ -46,8 +46,9 @@ public class Voter implements Serializable {
         this.has_evoted = false;
         this.has_pvoted = false;
 
-        Association.Belong.link(this,pollingStation);
+        Association.Belong.link(this, pollingStation);
     }
+
     public Voter(long id, String name, String nif, String email, PollingStation pollingStation, String password, boolean has_evoted, boolean has_pvoted) {
         this.id = id;
         this.name = name;
@@ -58,13 +59,15 @@ public class Voter implements Serializable {
         this.has_evoted = has_evoted;
         this.has_pvoted = has_pvoted;
 
-        Association.Belong.link(this,pollingStation);
+        Association.Belong.link(this, pollingStation);
     }
 
     /**
      * Solo para los tests de modelo
      */
-    public void setId(Long id) { this.id=id; }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public long getId() {
         return id;
@@ -110,17 +113,29 @@ public class Voter implements Serializable {
         this.password = password;
     }
 
-    public boolean isHas_evoted() {return has_evoted;}
+    public boolean isHas_evoted() {
+        return has_evoted;
+    }
 
-    public boolean isHas_pvoted() {return has_pvoted;}
+    public boolean isHas_pvoted() {
+        return has_pvoted;
+    }
 
-    public void setHas_evoted(boolean has_evoted) {this.has_evoted = has_evoted;}
+    public void setHas_evoted(boolean has_evoted) {
+        this.has_evoted = has_evoted;
+    }
 
-    public void setHas_pvoted(boolean has_pvoted) {this.has_pvoted = has_pvoted;}
+    public void setHas_pvoted(boolean has_pvoted) {
+        this.has_pvoted = has_pvoted;
+    }
 
-    public String getSalt() { return salt; }
+    public String getSalt() {
+        return salt;
+    }
 
-    public void setSalt(String salt) { this.salt = salt;  }
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
 
     @Override
     public boolean equals(Object o) {

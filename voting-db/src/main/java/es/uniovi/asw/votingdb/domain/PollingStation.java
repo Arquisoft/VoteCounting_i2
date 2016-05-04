@@ -2,9 +2,7 @@ package es.uniovi.asw.votingdb.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -20,10 +18,10 @@ public class PollingStation implements Serializable {
     private String country;
 
     @OneToMany(mappedBy = "pollingStation")
-    private Set<Voter> voters=new HashSet<Voter>();
+    private Set<Voter> voters = new HashSet<Voter>();
 
     @OneToMany(mappedBy = "pollingStation")
-    private Set<Vote> votes=new HashSet<Vote>();
+    private Set<Vote> votes = new HashSet<Vote>();
 
     public PollingStation() {
     }
@@ -38,7 +36,9 @@ public class PollingStation implements Serializable {
     /**
      * Solo para los tests de modelo
      */
-    public void setPolling_station_code(Long id) { this.polling_station_code=id; }
+    public void setPolling_station_code(Long id) {
+        this.polling_station_code = id;
+    }
 
     public long getPolling_station_code() {
         return polling_station_code;
@@ -76,7 +76,9 @@ public class PollingStation implements Serializable {
         this.country = country;
     }
 
-    protected Set<Voter> _getVoters() { return voters; }
+    protected Set<Voter> _getVoters() {
+        return voters;
+    }
 
     public Set<Voter> getVoters() {
         return new HashSet<Voter>(voters);

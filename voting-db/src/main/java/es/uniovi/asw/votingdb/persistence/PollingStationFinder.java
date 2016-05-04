@@ -8,6 +8,6 @@ import es.uniovi.asw.votingdb.persistence.util.Jpa;
  */
 public class PollingStationFinder {
     public static PollingStation findById(Long id) {
-    return Jpa.getManager().find(PollingStation.class, id);
-}
+        return Jpa.getManager().find(PollingStation.class, id);
+    }
 }

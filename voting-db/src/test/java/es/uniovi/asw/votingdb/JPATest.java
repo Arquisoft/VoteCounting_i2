@@ -1,22 +1,23 @@
 package es.uniovi.asw.votingdb;
 
 
-
 import es.uniovi.asw.votingdb.business.OptionService;
 import es.uniovi.asw.votingdb.business.PollingStationService;
 import es.uniovi.asw.votingdb.business.VoteService;
 import es.uniovi.asw.votingdb.business.VoterService;
 import es.uniovi.asw.votingdb.business.exception.VoterNotFoundException;
-import es.uniovi.asw.votingdb.domain.*;
+import es.uniovi.asw.votingdb.domain.Option;
+import es.uniovi.asw.votingdb.domain.PollingStation;
+import es.uniovi.asw.votingdb.domain.Vote;
+import es.uniovi.asw.votingdb.domain.Voter;
 import es.uniovi.asw.votingdb.infrastructure.ServicesFactory;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class JPATest {
     @Test
@@ -55,21 +56,21 @@ public class JPATest {
     }
 
     @Test
-    public void testGetNumberVotes(){
+    public void testGetNumberVotes() {
         PollingStation p1 = new PollingStation("Asturias", "Jogin", "Cimavilla", "España");
-        Option o1 = new Option("oo","oo");
+        Option o1 = new Option("oo", "oo");
 
         PollingStationService ps = ServicesFactory.createpollingStationService();
         OptionService os = ServicesFactory.createOptionService();
         VoteService vs = ServicesFactory.createVoteService();
 
-        p1=ps.updatePollingStation(p1);
-        o1=os.updateOption(o1);
+        p1 = ps.updatePollingStation(p1);
+        o1 = os.updateOption(o1);
 
-        Vote v1 = new Vote(o1,p1);
-        v1=vs.updateVote(v1);
+        Vote v1 = new Vote(o1, p1);
+        v1 = vs.updateVote(v1);
 
-        assertEquals(1L,vs.getNumberVotesOptionPolling(p1,o1));
+        assertEquals(1L, vs.getNumberVotesOptionPolling(p1, o1));
         assertTrue(vs.getVotesPolling(p1).contains(v1));
 
         vs.deleteVote(v1);
@@ -87,13 +88,13 @@ public class JPATest {
         }
 
         PollingStation p1 = new PollingStation("Asturias", "Jogin", "Cimavilla", "España");
-        Option o1 = new Option("oo","oo");
+        Option o1 = new Option("oo", "oo");
 
-        p1=ps.updatePollingStation(p1);
-        o1=os.updateOption(o1);
+        p1 = ps.updatePollingStation(p1);
+        o1 = os.updateOption(o1);
 
-        Vote v1 = new Vote(o1,p1);
-        v1=vs.updateVote(v1);
+        Vote v1 = new Vote(o1, p1);
+        v1 = vs.updateVote(v1);
 
         List<Vote> votes = new ArrayList<Vote>();
         votes.add(v1);

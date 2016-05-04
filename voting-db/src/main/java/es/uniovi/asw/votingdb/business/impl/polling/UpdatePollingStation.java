@@ -3,8 +3,6 @@ package es.uniovi.asw.votingdb.business.impl.polling;
 import es.uniovi.asw.votingdb.business.exception.BusinessException;
 import es.uniovi.asw.votingdb.business.impl.Command;
 import es.uniovi.asw.votingdb.domain.PollingStation;
-import es.uniovi.asw.votingdb.domain.Vote;
-import es.uniovi.asw.votingdb.domain.Voter;
 import es.uniovi.asw.votingdb.persistence.util.Jpa;
 
 /**

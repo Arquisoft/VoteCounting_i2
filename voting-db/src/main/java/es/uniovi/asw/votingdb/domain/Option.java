@@ -2,9 +2,7 @@ package es.uniovi.asw.votingdb.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -20,12 +18,12 @@ public class Option implements Serializable {
     private String comment;
 
     @OneToMany(mappedBy = "option")
-    private Set<Vote> votes=new HashSet<Vote>();
+    private Set<Vote> votes = new HashSet<Vote>();
 
     public Option() {
     }
 
-    public Option(String name,String comment) {
+    public Option(String name, String comment) {
         this.comment = comment;
         this.name = name;
     }
@@ -33,7 +31,9 @@ public class Option implements Serializable {
     /**
      * Solo para los tests de modelo
      */
-    public void setOption_id(Long id) { this.option_id=id; }
+    public void setOption_id(Long id) {
+        this.option_id = id;
+    }
 
     public long getOption_id() {
         return option_id;
@@ -62,17 +62,18 @@ public class Option implements Serializable {
     public Set<Vote> getVotes() {
         return new HashSet(votes);
     }
-/**
-    public void addVote(Vote v)
-    {
-        Association.InFavorOf.link(this,v);
-    }
 
-    public void removeVote(Vote v)
-    {
-        Association.InFavorOf.unlink(this,v);
-    }
-**/
+    /**
+     * public void addVote(Vote v)
+     * {
+     * Association.InFavorOf.link(this,v);
+     * }
+     * <p>
+     * public void removeVote(Vote v)
+     * {
+     * Association.InFavorOf.unlink(this,v);
+     * }
+     **/
     public void setVotes(Set<Vote> votes) {
         this.votes = votes;
     }

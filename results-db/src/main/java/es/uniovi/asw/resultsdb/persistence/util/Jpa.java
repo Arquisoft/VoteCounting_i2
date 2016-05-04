@@ -1,11 +1,10 @@
 package es.uniovi.asw.resultsdb.persistence.util;
 
+import es.uniovi.asw.resultsdb.business.exception.DatabaseFailException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
-import es.uniovi.asw.resultsdb.business.exception.DatabaseFailException;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

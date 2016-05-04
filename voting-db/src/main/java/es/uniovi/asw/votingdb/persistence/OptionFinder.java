@@ -1,7 +1,6 @@
 package es.uniovi.asw.votingdb.persistence;
 
 import es.uniovi.asw.votingdb.domain.Option;
-import es.uniovi.asw.votingdb.domain.PollingStation;
 import es.uniovi.asw.votingdb.persistence.util.Jpa;
 
 /**
@@ -9,6 +8,6 @@ import es.uniovi.asw.votingdb.persistence.util.Jpa;
  */
 public class OptionFinder {
     public static Option findById(Long id) {
-    return Jpa.getManager().find(Option.class, id);
-}
+        return Jpa.getManager().find(Option.class, id);
+    }
 }

@@ -7,15 +7,15 @@ import es.uniovi.asw.resultsdb.persistence.util.Jpa;
 
 public class UpdateResult implements Command<Results> {
 
-	private Results result;
+    private Results result;
 
-	public UpdateResult(Results result) {
-		this.result = result;
-	}
-	
-	@Override
-	public Results execute() throws BusinessException {
-		return Jpa.getManager().merge(result);
-	}
+    public UpdateResult(Results result) {
+        this.result = result;
+    }
+
+    @Override
+    public Results execute() throws BusinessException {
+        return Jpa.getManager().merge(result);
+    }
 
 }

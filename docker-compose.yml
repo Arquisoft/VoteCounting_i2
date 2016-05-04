@@ -1,0 +1,36 @@
+version: '2'
+services:
+  voting-db:
+    container_name: "voting-db"
+    image: mysql:5.6
+    environment:
+       - MYSQL_ROOT_PASSWORD=rootsecret
+       - MYSQL_DATABASE=voting
+       - MYSQL_USER=asw
+       - MYSQL_PASSWORD=secret
+
+  results:
+    container_name: "results"
+    build:
+      context: .
+      dockerfile: Dockerfile-results
+    ports:
+      - "8080:8080"
+    depends_on:
+      - voting-db
+    environment:
+      - VOTING_DB_URL=voting-db
+      - VOTING_DB_USER=asw
+      - VOTING_DB_PASSWORD=secret
+
+  counting:
+    container_name: "counting"
+    build:
+      context: .
+      dockerfile: Dockerfile-counting
+    depends_on:
+      - voting-db
+    environment:
+      - VOTING_DB_URL=voting-db
+      - VOTING_DB_USER=asw
+      - VOTING_DB_PASSWORD=secret

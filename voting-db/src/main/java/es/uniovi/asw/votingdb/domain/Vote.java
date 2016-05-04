@@ -1,7 +1,5 @@
 package es.uniovi.asw.votingdb.domain;
 
-import es.uniovi.asw.votingdb.domain.types.VoteKey;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -31,13 +29,15 @@ public class Vote implements Serializable {
         this.pollingStation = pollingStation;
 
         Association.InFavorOf.link(option, this);
-        Association.Exercise.link(pollingStation,this);
+        Association.Exercise.link(pollingStation, this);
     }
 
     /**
      * Solo para los tests de modelo
      */
-    public void setId(Long id) { this.id=id; }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public long getId() {
         return id;
