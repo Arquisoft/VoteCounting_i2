@@ -11,9 +11,7 @@ services:
 
   results:
     container_name: "results"
-    build:
-      context: .
-      dockerfile: Dockerfile-results
+    image: emibloque/votecountingi2-results
     ports:
       - "8080:8080"
     depends_on:
@@ -25,9 +23,7 @@ services:
 
   counting:
     container_name: "counting"
-    build:
-      context: .
-      dockerfile: Dockerfile-counting
+    image: emibloque/votecountingi2-counting
     depends_on:
       - voting-db
     environment:
