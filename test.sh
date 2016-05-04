@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-export VOTING_DB_URL=localhost
-export VOTING_DB_USER=root
-export VOTING_DB_PASSWORD=root
 sh reset.sh
 mvn clean
 mvn install -DskipTests
